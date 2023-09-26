@@ -21,6 +21,7 @@ const createNote = async (req, res, next) => {
 };
 const updateNote = async (req, res, next) => {
   try {
+    console.log(req.params.noteId, req.body);
     const data = await Notes.findByIdAndUpdate(req.params.noteId, req.body, {
       new: true,
     });

@@ -61,20 +61,30 @@
   height: 15vh;
   display: flex;
   flex-direction: column;
+  border: 1px solid;
+  border-radius: 0.5rem;
 }
 
 .notes {
-  height: 11vh;
+  height: 9vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cart > .del {
-  height: 4vh;
+.btns {
+  height: 6vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cart > .btns > .del,
+.cart > .btns > .edit {
+  /* border: 1px solid black; */
   letter-spacing: 0.1rem;
   font-weight: bolder;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
