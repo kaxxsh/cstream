@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-
+// Establishing MongoDB Connection along Node.js
+// MongoDB - Basic Connection
 const dbConnection = (URL) => {
   try {
     mongoose.connect(URL);

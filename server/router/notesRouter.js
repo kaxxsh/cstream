@@ -1,5 +1,6 @@
 import express from "express";
-import verifyUser from "../Middleware/Verify-User.js";
+
+// Setting up Routes for node.js app
 import {
   getAllNotes,
   createNote,
@@ -8,10 +9,11 @@ import {
 } from "../Controllers/notesController.js";
 const router = express.Router();
 
-router.route("/:id").get(verifyUser, getAllNotes).post(verifyUser, createNote);
-router
-  .route("/:id/:noteId")
-  .delete(verifyUser, deleteNote)
-  .patch(verifyUser, updateNote);
+
+// Setting up Routes for node.js app
+// Application Logic using NodeJS and Mongoose
+
+router.route("/").get(getAllNotes).post(createNote);
+router.route("/:noteId").delete(deleteNote).patch(updateNote);
 
 export default router;

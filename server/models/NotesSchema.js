@@ -1,16 +1,12 @@
 import mongoose from "mongoose";
 
+
+// Create a data base model
+// Create a data base model
+
 const Schema = mongoose.Schema(
   {
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    description: {
+    notes: {
       type: String,
       required: true,
     },

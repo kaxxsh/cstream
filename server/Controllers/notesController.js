@@ -2,9 +2,9 @@ import Notes from "../models/NotesSchema.js";
 
 const getAllNotes = async (req, res, next) => {
   try {
-    const data = await Notes.find({ user: req.params.id });
+    const data = await Notes.find();
     if (!data) throw new badRequest("No Notes Found");
-    res.status(200).json({ success: true, message: "All Notes" });
+    res.status(200).json(data);
   } catch (error) {
     next(error);
   }
